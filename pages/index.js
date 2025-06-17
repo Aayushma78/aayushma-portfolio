@@ -114,8 +114,8 @@ return (
           <li><a href='/files/cerificate.pdf' target='_blank'>🏆 Website Audience Analysis Project – Recording Academy</a></li>
         </ul>
 <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
-          <img src='/certs/cert1.jpg' alt='Cert 1' style={{ width: '200px', borderRadius: '8px' }} />
-          <img src='/certs/cert2.jpg' alt='Cert 2' style={{ width: '200px', borderRadius: '8px' }} />
+          <img src='/certs/certification.pdf' alt='Cert 1' style={{ width: '200px', borderRadius: '8px' }} />
+          <img src='/certs/certificate.pdf' alt='Cert 2' style={{ width: '200px', borderRadius: '8px' }} />
         </div>
       </section>
 
@@ -129,7 +129,7 @@ return (
       }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>🔗 Connect With Me</h2>
         <ul style={{ marginTop: '1rem', lineHeight: '2' }}>
-          <li><a href='mailto:aayushmabhattarai@gmail.com'>📧 aayushmabhattarai@gmail.com</a></li>
+          <li><a href='mailto:aayushmabtr@gmail.com'>📧 aayushmabtr@gmail.com</a></li>
           <li><a href='https://github.com/aayushma' target='_blank'>🐱 GitHub</a></li>
           <li><a href='https://linkedin.com/in/aayushma-bhattarai' target='_blank'>💼 LinkedIn</a></li>
         </ul>
