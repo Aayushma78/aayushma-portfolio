@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
-return (
+  return (
     <div style={{
       fontFamily: 'Segoe UI, sans-serif',
       padding: '2rem',
@@ -13,7 +13,7 @@ return (
       color: darkMode ? '#f5f5f5' : '#1a1a1a',
       transition: 'all 0.4s ease'
     }}>
-        
+
       {/* Toggle Theme */}
       <div style={{ textAlign: 'right' }}>
         <button
@@ -32,6 +32,43 @@ return (
         </button>
       </div>
 
+      {/* Scrollable Action Tabs */}
+      <div style={{
+        display: 'flex',
+        overflowX: 'auto',
+        gap: '1rem',
+        padding: '1rem 0',
+        whiteSpace: 'nowrap'
+      }}>
+        {[
+          { label: 'About', id: 'about' },
+          { label: 'Projects', id: 'projects' },
+          { label: 'Resume', id: 'resume' },
+          { label: 'Certifications', id: 'certifications' },
+          { label: 'Contact', id: 'contact' }
+        ].map((tab) => (
+          <button
+            key={tab.id}
+            onClick={() => {
+              const section = document.getElementById(tab.id);
+              if (section) section.scrollIntoView({ behavior: 'smooth' });
+            }}
+            style={{
+              padding: '0.6rem 1.2rem',
+              borderRadius: '999px',
+              background: darkMode ? '#444' : '#eee',
+              border: 'none',
+              fontWeight: '500',
+              color: darkMode ? '#fff' : '#000',
+              cursor: 'pointer',
+              flex: '0 0 auto'
+            }}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
+
       {/* Profile Image */}
       <motion.div
         initial={{ opacity: 0, y: -40 }}
@@ -43,9 +80,9 @@ return (
           src='/Me1.jpg'
           alt='Aayushma'
           style={{
-            width: '120px',
-            height: '120px',
-            borderRadius: '50%',
+            width: '300px',
+            height: '300px',
+            borderRadius: '70%',
             objectFit: 'cover',
             boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
           }}
@@ -54,6 +91,7 @@ return (
 
       {/* Hero Section */}
       <motion.section
+        id="about"
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.2 }}
@@ -66,8 +104,7 @@ return (
           boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
         }}
       >
-
-        <h1 style={{ fontSize: '2 rem', fontWeight: 'bold' }}>
+        <h1 style={{ fontSize: '2rem', fontWeight: 'bold' }}>
           Hello, I’m Aayushma Bhattarai 👋
         </h1>
         <p style={{ marginTop: '1rem', lineHeight: '1.6' }}>
@@ -80,8 +117,8 @@ return (
         </p>
       </motion.section>
 
- {/* Projects Section */}
-      <section style={{
+      {/* Projects Section */}
+      <section id="projects" style={{
         border: '1px solid #ccc',
         borderRadius: '12px',
         padding: '2rem',
@@ -97,38 +134,41 @@ return (
         </ul>
       </section>
 
-        {/* Resume & Certifications Section */}
-        <section style={{
-          border: '1px solid #ccc',
-          borderRadius: '12px',
-          padding: '2rem',
-          backgroundColor: darkMode ? '#2a2a2a' : '#ffffff',
-          marginBottom: '2rem',
-          boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
-        }}>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>📄 Resume & Certifications</h2>
-          <ul style={{ marginTop: '1rem', lineHeight: '2' }}>
-            <li><a href='/files/Resume_aayuuu.pdf'  target='_blank' style={{ textDecoration: 'none', color: darkMode ? '#aad' : '#06c' }} > 📄 View My Resume (PDF) </a> </li>
-            <li> <a href='/files/certification.pdf'  target='_blank' style={{ textDecoration: 'none', color: darkMode ? '#aad' : '#06c' }} > 🎓 Cybersecurity Awareness Certification – UNT </a></li>
-            <li> <a  href='/files/cerificate.pdf'  target='_blank'  style={{ textDecoration: 'none', color: darkMode ? '#aad' : '#06c' }}  >  🏆 Website Audience Analysis Project – Recording Academy </a>   </li>
-          </ul>
-        </section>
+      {/* Resume & Certifications Section */}
+      <section id="resume" style={{
+        border: '1px solid #ccc',
+        borderRadius: '12px',
+        padding: '2rem',
+        backgroundColor: darkMode ? '#2a2a2a' : '#ffffff',
+        marginBottom: '2rem',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+      }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>📄 Resume & Certifications</h2>
+        <ul style={{ marginTop: '1rem', lineHeight: '2' }}>
+          <li><a href='/files/Resume_aayuuu.pdf' target='_blank' style={{ textDecoration: 'none', color: darkMode ? '#aad' : '#06c' }} > 📄 View My Resume (PDF) </a> </li>
+          <li><a href='/files/certification.pdf' target='_blank' style={{ textDecoration: 'none', color: darkMode ? '#aad' : '#06c' }} > 🎓 Cybersecurity Awareness Certification – UNT </a></li>
+          <li><a href='/files/cerificate.pdf' target='_blank' style={{ textDecoration: 'none', color: darkMode ? '#aad' : '#06c' }} > 🏆 Website Audience Analysis Project – Recording Academy </a></li>
+        </ul>
+      </section>
 
-        {/* Contact Section */}
-        <section style={{
-          border: '1px solid #ccc',
-          borderRadius: '12px',
-          padding: '2rem',
-          backgroundColor: darkMode ? '#2a2a2a' : '#ffffff',
-          boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
-        }}>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>🔗 Connect With Me</h2>
-          <ul style={{ marginTop: '1rem', lineHeight: '2' }}>
-            <li><a href='mailto:aayushmabtr@gmail.com'  style={{ textDecoration: 'none', color: darkMode ? '#aad' : '#06c' }}  >  📧 aayushmabtr@gmail.com </a> </li>
-            <li> <a href='https://github.com/aayushma' target='_blank' style={{ textDecoration: 'none', color: darkMode ? '#aad' : '#06c' }}   >  🐱 GitHub </a> </li>
-            <li><a href='https://linkedin.com/in/aayushma-bhattarai' target='_blank' style={{ textDecoration: 'none', color: darkMode ? '#aad' : '#06c' }}  >  💼 LinkedIn </a> </li>
-          </ul>
-        </section>
+      {/* Certifications dummy section for tab scroll */}
+      <section id="certifications" style={{ display: 'none' }}></section>
+
+      {/* Contact Section */}
+      <section id="contact" style={{
+        border: '1px solid #ccc',
+        borderRadius: '12px',
+        padding: '2rem',
+        backgroundColor: darkMode ? '#2a2a2a' : '#ffffff',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+      }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>🔗 Connect With Me</h2>
+        <ul style={{ marginTop: '1rem', lineHeight: '2' }}>
+          <li><a href='mailto:aayushmabtr@gmail.com' style={{ textDecoration: 'none', color: darkMode ? '#aad' : '#06c' }}> 📧 aayushmabtr@gmail.com </a></li>
+          <li><a href='https://github.com/aayushma' target='_blank' style={{ textDecoration: 'none', color: darkMode ? '#aad' : '#06c' }}> 🐱 GitHub </a></li>
+          <li><a href='https://linkedin.com/in/aayushma-bhattarai' target='_blank' style={{ textDecoration: 'none', color: darkMode ? '#aad' : '#06c' }}> 💼 LinkedIn </a></li>
+        </ul>
+      </section>
 
     </div>
   );
