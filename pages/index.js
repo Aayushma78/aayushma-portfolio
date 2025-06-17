@@ -14,61 +14,65 @@ export default function Home() {
       transition: 'all 0.4s ease'
     }}>
 
-      {/* Toggle Theme */}
-      <div style={{ textAlign: 'right' }}>
-        <button
-          onClick={() => setDarkMode(!darkMode)}
-          style={{
-            padding: '0.5rem 1rem',
-            marginBottom: '1rem',
-            borderRadius: '6px',
-            cursor: 'pointer',
-            background: darkMode ? '#eee' : '#333',
-            color: darkMode ? '#333' : '#eee',
-            border: 'none'
-          }}
-        >
-          {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
-        </button>
-      </div>
 
-      {/* Scrollable Action Tabs */}
-      <div style={{
-        display: 'flex',
-        overflowX: 'auto',
-        gap: '1rem',
-        padding: '1rem 0',
-        whiteSpace: 'nowrap'
-      }}>
-        {[
-          { label: 'About', id: 'about' },
-          { label: 'Projects', id: 'projects' },
-          { label: 'Resume', id: 'resume' },
-          { label: 'Certifications', id: 'certifications' },
-          { label: 'Contact', id: 'contact' }
-        ].map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => {
-              const section = document.getElementById(tab.id);
-              if (section) section.scrollIntoView({ behavior: 'smooth' });
-            }}
-            style={{
-              padding: '0.6rem 1.2rem',
-              borderRadius: '999px',
-              background: darkMode ? '#444' : '#eee',
-              border: 'none',
-              fontWeight: '500',
-              color: darkMode ? '#fff' : '#000',
-              cursor: 'pointer',
-              flex: '0 0 auto'
-            }}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
+          {/* Scrollable Action Tabs (moved above theme toggle and enlarged) */}
+          <div style={{
+            display: 'flex',
+            overflowX: 'auto',
+            gap: '1rem',
+            paddingBottom: '1rem',
+            whiteSpace: 'nowrap'
+          }}>
+            {[
+              { label: 'About', id: 'about' },
+              { label: 'Projects', id: 'projects' },
+              { label: 'Resume', id: 'resume' },
+              { label: 'Certifications', id: 'certifications' },
+              { label: 'Contact', id: 'contact' }
+            ].map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => {
+                  const section = document.getElementById(tab.id);
+                  if (section) section.scrollIntoView({ behavior: 'smooth' });
+                }}
+                style={{
+                  padding: '0.75rem 1.5rem',
+                  borderRadius: '999px',
+                  background: darkMode ? '#444' : '#eee',
+                  border: 'none',
+                  fontWeight: '600',
+                  fontSize: '1rem',
+                  color: darkMode ? '#fff' : '#000',
+                  cursor: 'pointer',
+                  flex: '0 0 auto'
+                }}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
 
+          {/* Toggle Theme (moved below and made smaller) */}
+          <div style={{ textAlign: 'right' }}>
+            <button
+              onClick={() => setDarkMode(!darkMode)}
+              style={{
+                padding: '0.35rem 0.75rem',
+                fontSize: '0.85rem',
+                marginBottom: '1.5rem',
+                borderRadius: '6px',
+                cursor: 'pointer',
+                background: darkMode ? '#eee' : '#333',
+                color: darkMode ? '#333' : '#eee',
+                border: 'none'
+              }}
+            >
+              {darkMode ? '☀️ Light' : '🌙 Dark'}
+            </button>
+          </div>
+
+          
       {/* Profile Image */}
       <motion.div
         initial={{ opacity: 0, y: -40 }}
