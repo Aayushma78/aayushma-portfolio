@@ -98,15 +98,7 @@ return (
       </section>
 
       {/* Resume & Certifications Section */}
-	    <div
-  	style={{
-    	fontFamily: 'Segoe UI, sans-serif',
-    	padding: '2rem',
-    	minHeight: '100vh',
-    	backgroundColor: darkMode ? '#1a1a1a' : '#f5f5f5',
-    	color: darkMode ? '#f5f5f5' : '#1a1a1a',
-    	transition: 'all 0.4s ease'
-  	}}>
+
 	
 	  <section style={{
         border: '1px solid #ccc',
