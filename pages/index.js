@@ -97,42 +97,39 @@ return (
         </ul>
       </section>
 
-      {/* Resume & Certifications Section */}
+        {/* Resume & Certifications Section */}
+        <section style={{
+          border: '1px solid #ccc',
+          borderRadius: '12px',
+          padding: '2rem',
+          backgroundColor: darkMode ? '#2a2a2a' : '#ffffff',
+          marginBottom: '2rem',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+        }}>
+          <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>📄 Resume & Certifications</h2>
+          <ul style={{ marginTop: '1rem', lineHeight: '2' }}>
+            <li><a href='/files/Resume_aayuuu.pdf'  target='_blank' style={{ textDecoration: 'none', color: darkMode ? '#aad' : '#06c' }} > 📄 View My Resume (PDF) </a> </li>
+            <li> <a href='/files/certification.pdf'  target='_blank' style={{ textDecoration: 'none', color: darkMode ? '#aad' : '#06c' }} > 🎓 Cybersecurity Awareness Certification – UNT </a></li>
+            <li> <a  href='/files/cerificate.pdf'  target='_blank'  style={{ textDecoration: 'none', color: darkMode ? '#aad' : '#06c' }}  >  🏆 Website Audience Analysis Project – Recording Academy </a>   </li>
+          </ul>
+        </section>
 
-	
-	  <section style={{
-        border: '1px solid #ccc',
-        borderRadius: '12px',
-        padding: '2rem',
-        backgroundColor: '#ffffff',
-        marginBottom: '2rem',
-        boxShadow: '0 2px 6px rgba(0,0,0,0.1)'
-      }}>
-        
-        <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>📄 Resume & Certifications</h2>
-        <ul style={{ marginTop: '1rem', lineHeight: '2' }}>
-          <li><a href='/files/Resume_aayuuu.pdf' target='_blank'>📄 View My Resume (PDF)</a></li>
-          <li><a href='/files/certification.pdf' target='_blank'>🎓 Cybersecurity Awareness Certification – UNT</a></li>
-          <li><a href='/files/cerificate.pdf' target='_blank'>🏆 Website Audience Analysis Project – Recording Academy</a></li>
-        </ul>
+        {/* Contact Section */}
+        <section style={{
+          border: '1px solid #ccc',
+          borderRadius: '12px',
+          padding: '2rem',
+          backgroundColor: darkMode ? '#2a2a2a' : '#ffffff',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+        }}>
+          <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>🔗 Connect With Me</h2>
+          <ul style={{ marginTop: '1rem', lineHeight: '2' }}>
+            <li><a href='mailto:aayushmabtr@gmail.com'  style={{ textDecoration: 'none', color: darkMode ? '#aad' : '#06c' }}  >  📧 aayushmabtr@gmail.com </a> </li>
+            <li> <a href='https://github.com/aayushma' target='_blank' style={{ textDecoration: 'none', color: darkMode ? '#aad' : '#06c' }}   >  🐱 GitHub </a> </li>
+            <li><a href='https://linkedin.com/in/aayushma-bhattarai' target='_blank' style={{ textDecoration: 'none', color: darkMode ? '#aad' : '#06c' }}  >  💼 LinkedIn </a> </li>
+          </ul>
+        </section>
 
-        
-      {/* Contact Section */}
-      <section style={{
-        border: '1px solid #ccc',
-        borderRadius: '12px',
-        padding: '2rem',
-        backgroundColor: '#ffffff',
-        boxShadow: '0 2px 6px rgba(0,0,0,0.1)'
-      }}>
-        
-        <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>🔗 Connect With Me</h2>
-        <ul style={{ marginTop: '1rem', lineHeight: '2' }}>
-          <li><a href='mailto:aayushmabtr@gmail.com'>📧 aayushmabtr@gmail.com</a></li>
-          <li><a href='https://github.com/aayushma' target='_blank'>🐱 GitHub</a></li>
-          <li><a href='https://linkedin.com/in/aayushma-bhattarai' target='_blank'>💼 LinkedIn</a></li>
-        </ul>
-      </section>
     </div>
   );
 }
