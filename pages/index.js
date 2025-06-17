@@ -13,6 +13,7 @@ return (
       color: darkMode ? '#f5f5f5' : '#1a1a1a',
       transition: 'all 0.4s ease'
     }}>
+        
       {/* Toggle Theme */}
       <div style={{ textAlign: 'right' }}>
         <button
@@ -79,7 +80,6 @@ return (
         </p>
       </motion.section>
 
-
  {/* Projects Section */}
       <section style={{
         border: '1px solid #ccc',
@@ -97,9 +97,18 @@ return (
         </ul>
       </section>
 
-
       {/* Resume & Certifications Section */}
-      <section style={{
+	    <div
+  	style={{
+    	fontFamily: 'Segoe UI, sans-serif',
+    	padding: '2rem',
+    	minHeight: '100vh',
+    	backgroundColor: darkMode ? '#1a1a1a' : '#f5f5f5',
+    	color: darkMode ? '#f5f5f5' : '#1a1a1a',
+    	transition: 'all 0.4s ease'
+  	}}>
+	
+	  <section style={{
         border: '1px solid #ccc',
         borderRadius: '12px',
         padding: '2rem',
@@ -107,18 +116,15 @@ return (
         marginBottom: '2rem',
         boxShadow: '0 2px 6px rgba(0,0,0,0.1)'
       }}>
+        
         <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>📄 Resume & Certifications</h2>
         <ul style={{ marginTop: '1rem', lineHeight: '2' }}>
           <li><a href='/files/Resume_aayuuu.pdf' target='_blank'>📄 View My Resume (PDF)</a></li>
           <li><a href='/files/certification.pdf' target='_blank'>🎓 Cybersecurity Awareness Certification – UNT</a></li>
           <li><a href='/files/cerificate.pdf' target='_blank'>🏆 Website Audience Analysis Project – Recording Academy</a></li>
         </ul>
-<div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
-          <img src='/certs/certification.pdf' alt='Cert 1' style={{ width: '200px', borderRadius: '8px' }} />
-          <img src='/certs/certificate.pdf' alt='Cert 2' style={{ width: '200px', borderRadius: '8px' }} />
-        </div>
-      </section>
 
+        
       {/* Contact Section */}
       <section style={{
         border: '1px solid #ccc',
@@ -127,6 +133,7 @@ return (
         backgroundColor: '#ffffff',
         boxShadow: '0 2px 6px rgba(0,0,0,0.1)'
       }}>
+        
         <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>🔗 Connect With Me</h2>
         <ul style={{ marginTop: '1rem', lineHeight: '2' }}>
           <li><a href='mailto:aayushmabtr@gmail.com'>📧 aayushmabtr@gmail.com</a></li>
