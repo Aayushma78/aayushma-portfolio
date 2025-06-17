@@ -5,7 +5,46 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div style={{
+  
+
+ <nav style={{
+  position: 'sticky',
+  top: 0,
+  background: darkMode ? '#111' : '#fff',
+  padding: '1rem 2rem',
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+  zIndex: 10
+}}>
+  <div style={{ fontWeight: '700', fontSize: '1.2rem' }}>
+    Aayushma
+  </div>
+  <div style={{ display: 'flex', gap: '1rem' }}>
+    {['About', 'Projects', 'Resume', 'Contact'].map((tab) => (
+      <button
+        key={tab}
+        onClick={() => {
+          document.getElementById(tab.toLowerCase())?.scrollIntoView({ behavior: 'smooth' });
+        }}
+        style={{
+          background: 'transparent',
+          border: 'none',
+          cursor: 'pointer',
+          fontSize: '1rem',
+          color: darkMode ? '#fff' : '#000',
+          fontWeight: '500'
+        }}
+      >
+        {tab}
+      </button>
+    ))}
+  </div>
+</nav>
+
+
+ <div style={{
       fontFamily: 'Segoe UI, sans-serif',
       padding: '2rem',
       minHeight: '100vh',
@@ -14,44 +53,6 @@ export default function Home() {
       transition: 'all 0.4s ease'
     }}>
 
-
-          {/* Scrollable Action Tabs (moved above theme toggle and enlarged) */}
-          <div style={{
-            display: 'flex',
-            overflowX: 'auto',
-            gap: '1rem',
-            paddingBottom: '1rem',
-            whiteSpace: 'nowrap'
-          }}>
-            {[
-              { label: 'About', id: 'about' },
-              { label: 'Projects', id: 'projects' },
-              { label: 'Resume', id: 'resume' },
-              { label: 'Certifications', id: 'certifications' },
-              { label: 'Contact', id: 'contact' }
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => {
-                  const section = document.getElementById(tab.id);
-                  if (section) section.scrollIntoView({ behavior: 'smooth' });
-                }}
-                style={{
-                  padding: '0.75rem 1.5rem',
-                  borderRadius: '999px',
-                  background: darkMode ? '#444' : '#eee',
-                  border: 'none',
-                  fontWeight: '600',
-                  fontSize: '1rem',
-                  color: darkMode ? '#fff' : '#000',
-                  cursor: 'pointer',
-                  flex: '0 0 auto'
-                }}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
 
           {/* Toggle Theme (moved below and made smaller) */}
           <div style={{ textAlign: 'right' }}>
