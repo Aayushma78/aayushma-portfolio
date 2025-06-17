@@ -67,7 +67,7 @@ return (
         }}
       >
 
-        <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>
+        <h1 style={{ fontSize: '2 rem', fontWeight: 'bold' }}>
           Hello, I’m Aayushma Bhattarai 👋
         </h1>
         <p style={{ marginTop: '1rem', lineHeight: '1.6' }}>
